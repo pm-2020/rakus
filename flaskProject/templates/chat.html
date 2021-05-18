@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+    <h1>chatApp</h1>
+        <form action="/" method="GET">
+            <input type="text" name="name">
+            <button type="submit">検索</button>
+        </form>
+	<form action="/submit" method="POST">
+　      名前：<input type="text" name="chat_name">
+        本文：<input type="text" name="chat_text">
+            <button type="submit">送信</button>
+	</form>
+	{% for data in chat_alldata %}
+	<li>{{data}}</li>
+	{% endfor %}
+    </body>
+</html>
